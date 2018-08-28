@@ -1,17 +1,18 @@
 package com.lyhq.service.impl;
 
-import com.lyhq.center.dao.entity.LyhqTable;
-import com.lyhq.center.dao.mapper.LyhqTableMapper;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lyhq.center.dao.entity.LyhqTable;
+import com.lyhq.center.dao.mapper.LyhqTableMapper;
+import com.lyhq.service.TestService;
+
 /**
  * Created by lyhq on 18/08/22
  */
-@Service
-public class TestServiceImpl implements com.lyhq.service.TestService {
+@Service("testService")
+public class TestServiceImpl implements TestService {
 
     @Autowired
     private LyhqTableMapper lyhqTableMapper;

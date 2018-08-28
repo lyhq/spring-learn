@@ -85,6 +85,9 @@
 		transaction-manager="transactionManager" />
 
 	<!--编程式事务使用 -->
-	<bean id="txDefinition"
-		class="org.springframework.transaction.support.DefaultTransactionDefinition"></bean>
+	<!-- <bean id="txDefinition"
+		class="org.springframework.transaction.support.DefaultTransactionDefinition"></bean> -->
+		
+	<!-- 保存spring加载的bean -->
+    <bean name="springContextHolder" class="com.lyhq.common.SpringContextHolder"/>
 </beans>
