@@ -3,10 +3,15 @@ package com.atguigu.bean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Dog {
+public class Dog implements ApplicationContextAware {
+	//注入ioc容器
+	private ApplicationContext applicationContext = null;
 
 	public Dog() {
 		System.out.println("dog constructor...");
@@ -22,5 +27,10 @@ public class Dog {
 	@PreDestroy
 	public void destory() {
 		System.out.println("dog... @PreDestroy...");
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		this.applicationContext = applicationContext;
 	}
 }
