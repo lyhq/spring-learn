@@ -6,11 +6,9 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import com.atguigu.bean.Person;
-import com.atguigu.service.BookService;
 
 //配置类 = 配置文件
 @Configuration //告诉Spring这是一个配置类

@@ -15,6 +15,16 @@ public class IOCTest {
 	@Test
 	public void testImport(){
 		printBeans(applicationContext);
+		
+		//获取colorFactoryBean的类型
+		//工厂Bean获取的是调用getObject得到的对象
+		Object bean = applicationContext.getBean("colorFactoryBean");
+		Object bean2 = applicationContext.getBean("colorFactoryBean");
+		System.out.println("bean的类型："+bean.getClass());
+		System.out.println(bean==bean2);
+		
+		Object bean3 = applicationContext.getBean("&colorFactoryBean");
+		System.out.println(bean3.getClass());
 	}
 	
 	public void printBeans(ApplicationContext applicationContext){
@@ -38,7 +48,6 @@ public class IOCTest {
 	}
 	
 	@Test
-	@SuppressWarnings("resource")
 	public void test02(){
 		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
 		for (String string : beanDefinitionNames) {

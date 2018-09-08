@@ -10,7 +10,6 @@ import org.springframework.core.type.classreading.MetadataReaderFactory;
 import org.springframework.core.type.filter.TypeFilter;
 
 public class MyTypeFilter implements TypeFilter {
-
 	
 	/**
 	 * metadataReader: 读取到的当前正在扫描的类的信息
